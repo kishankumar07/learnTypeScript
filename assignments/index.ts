@@ -148,84 +148,84 @@ let readlineSync = require('readline-sync');
 // 1 2 3 4
 
 
-// (function(){
-//     for(let i=1;i<5;i++){
-//         let str = ''
-//         for(let j = 1;j<=i;j++){
-//             str += j + ' ';
-//         }
-//         console.log(str);
-//     }
-// })()
+(function(){
+    for(let i=1;i<5;i++){
+        let str = ''
+        for(let j = 1;j<=i;j++){
+            str += j + ' ';
+        }
+        console.log(str);
+    }
+})()
 
 // ====================================================================-----------
 
 // 10) array swapping :
 
-// function createArray(size:number):number[] {
-//     let array:number[] = [];
-//         for(let i = 0;i<size;i++){
-//             let value = parseInt(readlineSync.question(`Enter ${i+1}st element of the array`));
-//             array.push(value);
-//         }
-//         return array;
-// }
+function createArray(size:number):number[] {
+    let array:number[] = [];
+        for(let i = 0;i<size;i++){
+            let value = parseInt(readlineSync.question(`Enter ${i+1}st element of the array`));
+            array.push(value);
+        }
+        return array;
+}
 
 
 
-// function main(){
-//     let size = parseInt(readlineSync.question('Enter the size of the array'));
+function main(){
+    let size = parseInt(readlineSync.question('Enter the size of the array'));
 
-//     console.log('size given by user is :',size)
-//     let array1 = createArray(size)
-//     console.log('array1 is :',array1);
+    console.log('size given by user is :',size)
+    let array1 = createArray(size)
+    console.log('array1 is :',array1);
 
-//     let array2 = createArray(size);
-//     console.log('array2 is :',array2);
+    let array2 = createArray(size);
+    console.log('array2 is :',array2);
 
-//     for(let i=0;i<size;i++){
-//         let temp = array1[i];
-//         array1[i]= array2[i];
-//         array2[i] = temp;
-//     }
-//     console.log('after swapping');
-//     console.log('array1 is :',array1);
-//     console.log('array2 is :',array2);
+    for(let i=0;i<size;i++){
+        let temp = array1[i];
+        array1[i]= array2[i];
+        array2[i] = temp;
+    }
+    console.log('after swapping');
+    console.log('array1 is :',array1);
+    console.log('array2 is :',array2);
 
-// }
-// main();
+}
+main();
 
 // -------------------------------------------------------------------------------
 
 // 11) Write a program to find the number of even numbers in an array
 
-// function createAnotherArray(size:number):Array<number>{
-//     let array:Array<number> = [];
-//     for(let i = 0 ;i<size;i++){
-//         let value = parseInt(readlineSync.question(`Enter ${i+1}th value of the array`));
-//         array.push(value);
-//     }
-//     return array;
-// }
+function createAnotherArray(size:number):Array<number>{
+    let array:Array<number> = [];
+    for(let i = 0 ;i<size;i++){
+        let value = parseInt(readlineSync.question(`Enter ${i+1}th value of the array`));
+        array.push(value);
+    }
+    return array;
+}
 
-// function numberOfEvenNumbersInArray(arr:number[]):number{
-//     let flag = 0;
-//     for(let i=0;i<arr.length;i++){
-//         if(arr[i]%2===0){
-//             flag++;
-//         }
-//     }
-//     return flag;
-// }
+function numberOfEvenNumbersInArray(arr:number[]):number{
+    let flag = 0;
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2===0){
+            flag++;
+        }
+    }
+    return flag;
+}
 
 
 
-// let size = parseInt(readlineSync.question('Enter the size of the array'));
+let size = parseInt(readlineSync.question('Enter the size of the array'));
 
-// let array1 = createAnotherArray(size);
-// console.log('entered array is :',array1);
+let array1 = createAnotherArray(size);
+console.log('entered array is :',array1);
 
-// console.log(numberOfEvenNumbersInArray(array1));
+console.log(numberOfEvenNumbersInArray(array1));
 
 
 
@@ -233,100 +233,100 @@ let readlineSync = require('readline-sync');
 
 // 12) Program to sort an array in descending order
 
-// function getArrayFromUser(size:number):number[]{
-//     let arr = [];
-//     for(let i=0;i<size;i++){
-//         let value = parseInt(readlineSync.question(`Enter value of ${i+1}th of array`));
-//         arr.push(value);
-//     }
-//     return arr;
-// }
+function getArrayFromUser(size:number):number[]{
+    let arr = [];
+    for(let i=0;i<size;i++){
+        let value = parseInt(readlineSync.question(`Enter value of ${i+1}th of array`));
+        arr.push(value);
+    }
+    return arr;
+}
 
 
 
-// let size = parseInt(readlineSync.question('enter the size of the array'));
+let size = parseInt(readlineSync.question('enter the size of the array'));
 
-// let array1 = getArrayFromUser(size);
+let array1 = getArrayFromUser(size);
 
-// array1.sort((a,b)=>(b-a));
-// console.log('after sorting : ',array1)
+array1.sort((a,b)=>(b-a));
+console.log('after sorting : ',array1)
 
 // ------------------------------------------------------------------------------
 
 // 13) To check whether a string is palindrome or not
 
-// let string = readlineSync.question('Enter the string to check for palindrome');
+let string = readlineSync.question('Enter the string to check for palindrome');
 
-// let reversedString = string.split('').reverse().join('');
+let reversedString = string.split('').reverse().join('');
 
-// string === reversedString ? console.log('Palindrome') : console.log('not palindrome');
+string === reversedString ? console.log('Palindrome') : console.log('not palindrome');
 
 
 // 14) Program to add 2 two-dimensional array
 
-// function getSum2DArray(arr1:number[][],arr2:number[][]):number[][]{
-//     let array:number[][] = [];
+function getSum2DArray(arr1:number[][],arr2:number[][]):number[][]{
+    let array:number[][] = [];
 
-//     for(let i=0;i<arr1.length;i++){
-//         let row:number[] = []
-//         for(let j=0;j<arr1[i].length;j++){
-//             row.push(arr1[i][j] + arr2[i][j]);
-//         }
-//         array.push(row);
-//     }
-//     return array;
-// }
+    for(let i=0;i<arr1.length;i++){
+        let row:number[] = []
+        for(let j=0;j<arr1[i].length;j++){
+            row.push(arr1[i][j] + arr2[i][j]);
+        }
+        array.push(row);
+    }
+    return array;
+}
 
-// function getArrayValues(size:number):number[][]{
-//     let arr:number[][] = [];
-//     for(let i=0;i<size;i++){
-//         let row:number[] = [];
-//         for(let j=0;j<size;j++){
-//             let value = parseInt(readlineSync.question(`enter the ${i+1}th value of the array`))
-//             row.push(value);
-//         }
-//         arr.push(row);
-//     }
-//     return arr;
-// }
+function getArrayValues(size:number):number[][]{
+    let arr:number[][] = [];
+    for(let i=0;i<size;i++){
+        let row:number[] = [];
+        for(let j=0;j<size;j++){
+            let value = parseInt(readlineSync.question(`enter the ${i+1}th value of the array`))
+            row.push(value);
+        }
+        arr.push(row);
+    }
+    return arr;
+}
 
 
-// let size = parseInt(readlineSync.question('Enter the size of the array'));
+let size = parseInt(readlineSync.question('Enter the size of the array'));
 
-// let array1 = getArrayValues(size);
-// console.log('1st array is:',array1)
+let array1 = getArrayValues(size);
+console.log('1st array is:',array1)
 
-// let array2 = getArrayValues(size);
-// console.log('2nd array is :',array2);
+let array2 = getArrayValues(size);
+console.log('2nd array is :',array2);
 
-// let arraySum = getSum2DArray(array1,array2);
+let arraySum = getSum2DArray(array1,array2);
 
-// console.log('summed array  is: ',arraySum);
+console.log('summed array  is: ',arraySum);
 
 
 // ----------------------------------------------------------------------------------
 // 15) write a program to accept an array and display it on the console using function
 
-// function getArray(size:number):number[]{
-//     let array:number[] = []
-//     for(let i=0;i<size;i++){
-//         let value = parseInt(readlineSync.question('enter the array values one by one'));
-//         array.push(value);
-//     }
-//     return array;
-// }
+function getArray(size:number):number[]{
+    let array:number[] = []
+    for(let i=0;i<size;i++){
+        let value = parseInt(readlineSync.question('enter the array values one by one'));
+        array.push(value);
+    }
+    return array;
+}
 
-// function displayArray(arr:number[]):string{
-//    return arr.join('');
-// }
+function displayArray(arr:number[]):string{
+   return arr.join('');
+}
 
-// function main(){
-//     let size = parseInt(readlineSync.question('enter the size of the array'));
-//     let arr = getArray(size)
-//     console.log(displayArray(arr))
-// }
+function main(){
+    let size = parseInt(readlineSync.question('enter the size of the array'));
+    let arr = getArray(size)
+    console.log(displayArray(arr))
+}
 
-// main()
+main()
 
 
 
@@ -335,80 +335,80 @@ let readlineSync = require('readline-sync');
 
 // 16) Write a program to check whether a given number is prime or not
 
-// function checkPrime(num:number):void{
-//     if(num<=1) console.log('not prime');
-//     let flag = 0;
-//     for(let i=2;i<num;i++){
-//         if(num%i===0){
-//             flag++;
-//         }
-//     }
-//     flag > 0 ? console.log('Not prime') : console.log('Prime');
-// }
+function checkPrime(num:number):void{
+    if(num<=1) console.log('not prime');
+    let flag = 0;
+    for(let i=2;i<num;i++){
+        if(num%i===0){
+            flag++;
+        }
+    }
+    flag > 0 ? console.log('Not prime') : console.log('Prime');
+}
 
 
-// let number = parseInt(readlineSync.question('Enter the number to check prime'));
-// checkPrime(number);
+let number = parseInt(readlineSync.question('Enter the number to check prime'));
+checkPrime(number);
 
 // ------------------------------------------------------------------------
 
 // 17) Write a menu driven program
 
-// class Calculator{
-//     addition(a:number,b:number):number{
-//         return a+b;
-//     }
-//     subtraction(a:number,b:number):number{
-//         return a-b;
-//     }
-//     multiplication(a:number,b:number):number{
-//         return a*b;
-//     }
-//     division(a:number,b:number):number{
-//         return a/b;
-//     }
-// }
+class Calculator{
+    addition(a:number,b:number):number{
+        return a+b;
+    }
+    subtraction(a:number,b:number):number{
+        return a-b;
+    }
+    multiplication(a:number,b:number):number{
+        return a*b;
+    }
+    division(a:number,b:number):number{
+        return a/b;
+    }
+}
 
-// function main(){
-//     let calc = new Calculator();
-//    while(true){
-//     console.log('Choose : 1 for addition')
-//     console.log('2 for subtraction');console.log('3 for multiplication');
-//     console.log('4 for division');console.log('5 for exit');
+function main(){
+    let calc = new Calculator();
+   while(true){
+    console.log('Choose : 1 for addition')
+    console.log('2 for subtraction');console.log('3 for multiplication');
+    console.log('4 for division');console.log('5 for exit');
 
-//     let value = parseInt(readlineSync.question('enter a choice from 1 to 5'));
-//     if(value === 5) break;
-//     let result;
-//     let val1 = parseInt(readlineSync.question('enter first number'));
-//     let val2 = parseInt(readlineSync.question('Enter the 2nd number'));
-//     switch(value){
-//         case 1 : {
-//             result = calc.addition(val1,val2);
-//             console.log(` Sum is ${result}`)
-//             break; 
-//         }
-//         case 2 : {
-//             result = calc.subtraction(val1,val2);
-//             console.log(`Difference is ${result}`)
-//             break;
-//         }
-//         case 3 :{
-//             result = calc.multiplication(val1,val2);
-//             console.log(`Multiplication is ${result}`);break;
-//         }
-//         case 4 : {
-//             result = calc.division(val1,val2);
-//             console.log(`Division is ${result}`);break;
-//         }
-//         default :{
-//             console.log('Invalid entry')
-//         }
-//      }
+    let value = parseInt(readlineSync.question('enter a choice from 1 to 5'));
+    if(value === 5) break;
+    let result;
+    let val1 = parseInt(readlineSync.question('enter first number'));
+    let val2 = parseInt(readlineSync.question('Enter the 2nd number'));
+    switch(value){
+        case 1 : {
+            result = calc.addition(val1,val2);
+            console.log(` Sum is ${result}`)
+            break; 
+        }
+        case 2 : {
+            result = calc.subtraction(val1,val2);
+            console.log(`Difference is ${result}`)
+            break;
+        }
+        case 3 :{
+            result = calc.multiplication(val1,val2);
+            console.log(`Multiplication is ${result}`);break;
+        }
+        case 4 : {
+            result = calc.division(val1,val2);
+            console.log(`Division is ${result}`);break;
+        }
+        default :{
+            console.log('Invalid entry')
+        }
+     }
 
-//    }
+   }
    
-// }
-// main()
+}
+main()
 
 
 
@@ -418,52 +418,52 @@ let readlineSync = require('readline-sync');
 // 18) Grades are computed using weighted average
 
 
-// function overallGrade(mark1:number,mark2:number,mark3:number):number{
+function overallGrade(mark1:number,mark2:number,mark3:number):number{
 
-//     let result:number;
+    let result:number;
 
-//     result = (mark1 * 70/100) + (mark2 * 20/100) + (mark3 * 10/100);
-//     return result;
+    result = (mark1 * 70/100) + (mark2 * 20/100) + (mark3 * 10/100);
+    return result;
 
-// }
+}
 
 
-// let mark = parseFloat(readlineSync.question('enter the mark scored'));
+let mark = parseFloat(readlineSync.question('enter the mark scored'));
 
-// let labMark = parseFloat(readlineSync.question('enter your lab mark'));
+let labMark = parseFloat(readlineSync.question('enter your lab mark'));
 
-// let assiMark = parseFloat(readlineSync.question("Enter your assignment mark"));
+let assiMark = parseFloat(readlineSync.question("Enter your assignment mark"));
 
-// let result = overallGrade(mark,labMark,assiMark);
-// console.log('your result is :',result)
+let result = overallGrade(mark,labMark,assiMark);
+console.log('your result is :',result)
 
 // =--------------------------------------------------------------------
 
 // 19) Income tax calculation
 
-// function getIncomeTaxAmount(income:number):number | undefined{
+function getIncomeTaxAmount(income:number):number | undefined{
 
-//     if(income <= 250000){
-//         return 0;
-//     }
-//     else if(income > 250000 && income <= 500000){
-//         return income * (5/100);
-//     }
-//     else if(income > 500000 && income <= 1000000){
-//         return income * (20/100);
-//     }
-//     else if(income >1000000 ){
-//         return income * (30/100);
-//     }
+    if(income <= 250000){
+        return 0;
+    }
+    else if(income > 250000 && income <= 500000){
+        return income * (5/100);
+    }
+    else if(income > 500000 && income <= 1000000){
+        return income * (20/100);
+    }
+    else if(income >1000000 ){
+        return income * (30/100);
+    }
 
-// }
+}
 
 
 
-// let income = parseFloat(readlineSync.question('Enter your income in LPA eg:300000 or 250000'));
+let income = parseFloat(readlineSync.question('Enter your income in LPA eg:300000 or 250000'));
 
-// let res = getIncomeTaxAmount(income);
-// console.log('Your tax amount is :',res)
+let res = getIncomeTaxAmount(income);
+console.log('Your tax amount is :',res)
 
 // ---------------------------------------------------------------------------
 
@@ -478,15 +478,15 @@ let readlineSync = require('readline-sync');
 
 // 7  8  9  10
 
-// let val = 1;
-// for(let i=1;i<5;i++){
-//     let str = '';
-//     for(let j=1;j<=i;j++){
-//         str += val + ' ';
-//         val++; 
-//     }
-//     console.log(str)
-// }
+let val = 1;
+for(let i=1;i<5;i++){
+    let str = '';
+    for(let j=1;j<=i;j++){
+        str += val + ' ';
+        val++; 
+    }
+    console.log(str)
+}
 
 
 
@@ -495,111 +495,111 @@ let readlineSync = require('readline-sync');
 
 // 21) Program to multiply adjacant values of an arra
 
-// function getArray(size:number):number[]{
-//     let array:number[] = [];
-//         for(let i=0;i<size;i++){
-//             let val = parseInt(readlineSync.question('Enter each value of array'));
-//             array.push(val);
-//         }
-//         return array;
+function getArray(size:number):number[]{
+    let array:number[] = [];
+        for(let i=0;i<size;i++){
+            let val = parseInt(readlineSync.question('Enter each value of array'));
+            array.push(val);
+        }
+        return array;
 
-// }
+}
 
-// function multiplyAdhacantValues(array:number[]){
-//     let arr:number[] = [];
-//     for(let i=1;i<array.length;i++){
-//         arr.push(array[i] * array[i-1])
-//     }
-//     return arr;
-// }
-
-
+function multiplyAdhacantValues(array:number[]){
+    let arr:number[] = [];
+    for(let i=1;i<array.length;i++){
+        arr.push(array[i] * array[i-1])
+    }
+    return arr;
+}
 
 
-// let size = parseInt (readlineSync.question('enter the size of the array'));
 
-// let array = getArray(size);
 
-// console.log('this is the product we were looking for :',multiplyAdhacantValues(array));
+let size = parseInt (readlineSync.question('enter the size of the array'));
+
+let array = getArray(size);
+
+console.log('this is the product we were looking for :',multiplyAdhacantValues(array));
 
 // ------------------------------------------------------------------
 
 // 22) Add the values of 2D array 
 
-// function getArray(size:number):number[][]{
-//     let arr:number[][] = [];
+function getArray(size:number):number[][]{
+    let arr:number[][] = [];
 
-//     for(let i=0;i<size;i++){
-//         let row:number[] = []
-//         for(let j=0;j<size;j++){
-//             let value = parseInt(readlineSync.question(`Enter the ${i+1}th value of the array`));
-//             row.push(value);
-//         }
-//         arr.push(row);
-//     }
-//     return arr;
-// }
+    for(let i=0;i<size;i++){
+        let row:number[] = []
+        for(let j=0;j<size;j++){
+            let value = parseInt(readlineSync.question(`Enter the ${i+1}th value of the array`));
+            row.push(value);
+        }
+        arr.push(row);
+    }
+    return arr;
+}
 
-// function addArray(arr1:number[][],arr2:number[][]):number[][]{
-//     let arr:number[][] = [];
+function addArray(arr1:number[][],arr2:number[][]):number[][]{
+    let arr:number[][] = [];
 
-//     for(let i=0;i<arr1.length;i++){
-//         let row:number[] = [];
-//         for(let j=0;j<arr1[i][j];j++){
-//             row.push(arr1[i][j] + arr2[i][j]);
-//         }
-//         arr.push(row);
-//     }
-//     return arr;
-// }
+    for(let i=0;i<arr1.length;i++){
+        let row:number[] = [];
+        for(let j=0;j<arr1[i][j];j++){
+            row.push(arr1[i][j] + arr2[i][j]);
+        }
+        arr.push(row);
+    }
+    return arr;
+}
 
-// function displayArray(arr1:number[][],arr2:number[][]){
-//     console.log('array1 is :',arr1);console.log('array2 is :',arr2);
-// }
+function displayArray(arr1:number[][],arr2:number[][]){
+    console.log('array1 is :',arr1);console.log('array2 is :',arr2);
+}
 
-// let size = parseInt(readlineSync.question('Enter the size of the array'));
+let size = parseInt(readlineSync.question('Enter the size of the array'));
 
-// let array1 = getArray(size);
+let array1 = getArray(size);
 
-// let array2 = getArray(size);
+let array2 = getArray(size);
 
-// console.log('array sum is :',addArray(array1,array2))
+console.log('array sum is :',addArray(array1,array2))
 
-// displayArray(array1,array2)
+displayArray(array1,array2)
 
 
 // -------------------------------------------------------------------------
 
 // 23) write object oriented program to store and display the values of 2D array
 
-// class Array2D{
-//     private array:number[][] = [];
-//     constructor(private size:number){
-//         this.size = size;
-//     }
+class Array2D{
+    private array:number[][] = [];
+    constructor(private size:number){
+        this.size = size;
+    }
 
-//     getArray():number[][]{
+    getArray():number[][]{
        
-//         for(let i=0;i<this.size;i++){
-//             let row:number[] = [];
-//             for(let j=0;j<this.size;j++){
-//                 let value = parseInt(readlineSync.question('Enter the array values'));
-//                 row.push(value);
-//             }
-//             this.array.push(row);
-//         }
-//         return this.array;
-//     }
-//     displayArray(){
-//         console.log('The array when display function called is :',this.array);
-//     }
+        for(let i=0;i<this.size;i++){
+            let row:number[] = [];
+            for(let j=0;j<this.size;j++){
+                let value = parseInt(readlineSync.question('Enter the array values'));
+                row.push(value);
+            }
+            this.array.push(row);
+        }
+        return this.array;
+    }
+    displayArray(){
+        console.log('The array when display function called is :',this.array);
+    }
 
-// }
-// let size = parseInt(readlineSync.question('Enter the size of the array'));
-// let array2D = new Array2D(size);
+}
+let size = parseInt(readlineSync.question('Enter the size of the array'));
+let array2D = new Array2D(size);
 
-// console.log('2D array is :',array2D.getArray());
-// array2D.displayArray();
+console.log('2D array is :',array2D.getArray());
+array2D.displayArray();
 
 
 
@@ -607,73 +607,73 @@ let readlineSync = require('readline-sync');
 
 // 24) Area of the given object :
 
-// class Area{
-//     circle(radius:number):number{
-//         const pi = 3.14;
-//             return pi * radius **2;
-//     }
-//     square(side:number){
-//         return side * side;
-//     }
-//     rectangle(length:number,breadth:number){
-//         return length * breadth;
-//     }
-//     triangle(base:number,alti:number){
-//         return 0.5 * base * alti;
-//     }
-// }
+class Area{
+    circle(radius:number):number{
+        const pi = 3.14;
+            return pi * radius **2;
+    }
+    square(side:number){
+        return side * side;
+    }
+    rectangle(length:number,breadth:number){
+        return length * breadth;
+    }
+    triangle(base:number,alti:number){
+        return 0.5 * base * alti;
+    }
+}
 
-// class MyClass extends Area{
-//     main(){
-//         while(true){
-//             console.log('Enter your choice : 1 for circle | 2 for Square | 3 for Rectangle | 4 for Triangle');
+class MyClass extends Area{
+    main(){
+        while(true){
+            console.log('Enter your choice : 1 for circle | 2 for Square | 3 for Rectangle | 4 for Triangle');
 
-//             let val = parseInt(readlineSync.question('1 - 4 which is your choice'));
+            let val = parseInt(readlineSync.question('1 - 4 which is your choice'));
 
-//             switch(val){
-//                 case 1 :{
-//                     this.calculateCircleArea();
-//                     break;
-//                 }
-//                 case 2 :{
-//                     this.calculateSquareArea();
-//                     break;
-//                 }
-//                 case 3 : {
-//                     this.calculateRectangleArea();
-//                     break;
-//                 }
-//                 case 4 : {
-//                     this.caculateTriangleArea();
-//                     break;
-//                 }
-//                 default : {
-//                     console.log('invalid entry');
-//                 }
-//             }
-//         }
-//     }
-//     calculateCircleArea(){
-//         let radius = parseFloat(readlineSync.question('enter the radius of the circle'));
-//         console.log('Area of circle is :',this.circle(radius));
-//     }
-//     calculateSquareArea(){
-//         let side = parseFloat(readlineSync.question('Enter the side of the square'));
-//         console.log('area of square is:',this.square(side));
-//     }
-//     calculateRectangleArea(){
-//         let length = parseFloat(readlineSync.question('enter the lenght of the rectangle'));
-//         let breadth = parseFloat (readlineSync.question('Enter the breadth of the rectangle'));
-//         console.log('Area of the rectangle is :',this.rectangle(length,breadth));
-//     }
-//     caculateTriangleArea(){
-//         let base = parseFloat(readlineSync.question('Enter the base of the triangle'));
-//         let altitude = parseFloat(readlineSync.question('Enter the altitude of the triangle'));
-//         console.log('Area of the triangle is:',this.triangle(base,altitude));
-//     }
-// }
-// let myClass = new MyClass();
-// myClass.main();
+            switch(val){
+                case 1 :{
+                    this.calculateCircleArea();
+                    break;
+                }
+                case 2 :{
+                    this.calculateSquareArea();
+                    break;
+                }
+                case 3 : {
+                    this.calculateRectangleArea();
+                    break;
+                }
+                case 4 : {
+                    this.caculateTriangleArea();
+                    break;
+                }
+                default : {
+                    console.log('invalid entry');
+                }
+            }
+        }
+    }
+    calculateCircleArea(){
+        let radius = parseFloat(readlineSync.question('enter the radius of the circle'));
+        console.log('Area of circle is :',this.circle(radius));
+    }
+    calculateSquareArea(){
+        let side = parseFloat(readlineSync.question('Enter the side of the square'));
+        console.log('area of square is:',this.square(side));
+    }
+    calculateRectangleArea(){
+        let length = parseFloat(readlineSync.question('enter the lenght of the rectangle'));
+        let breadth = parseFloat (readlineSync.question('Enter the breadth of the rectangle'));
+        console.log('Area of the rectangle is :',this.rectangle(length,breadth));
+    }
+    caculateTriangleArea(){
+        let base = parseFloat(readlineSync.question('Enter the base of the triangle'));
+        let altitude = parseFloat(readlineSync.question('Enter the altitude of the triangle'));
+        console.log('Area of the triangle is:',this.triangle(base,altitude));
+    }
+}
+let myClass = new MyClass();
+myClass.main();
 
 
 // ----------------------------------------------------------------------------
@@ -681,92 +681,166 @@ let readlineSync = require('readline-sync');
 // 25)  Display the status
 
 
-// interface LibraryItem{
-//     title:string,
-//     author:string,
-//     readingStatus:boolean
-// }
-// type LibraryItem = {
-//     title :string,
-//     author:string,
-//     readingStatus:boolean
-// }
+interface LibraryItem{
+    title:string,
+    author:string,
+    readingStatus:boolean
+}
+type LibraryItem = {
+    title :string,
+    author:string,
+    readingStatus:boolean
+}
 
 
-// let library:LibraryItem[] = [ 
-//     {
-//         title: 'Bill Gates',
-//         author: 'The Road Ahead',
-//         readingStatus: true
-//     },
-//     {
-//         title: 'Steve Jobs',
-//         author: 'Walter Isaacson',
-//         readingStatus: true
-//     },
-//     {
-//         title: 'Mockingjay: The Final Book of The Hunger Games',
-//         author: 'Suzanne Collins',
-//         readingStatus: false
-//     }
-// ];
+let library:LibraryItem[] = [ 
+    {
+        title: 'Bill Gates',
+        author: 'The Road Ahead',
+        readingStatus: true
+    },
+    {
+        title: 'Steve Jobs',
+        author: 'Walter Isaacson',
+        readingStatus: true
+    },
+    {
+        title: 'Mockingjay: The Final Book of The Hunger Games',
+        author: 'Suzanne Collins',
+        readingStatus: false
+    }
+];
 
-//     function displayStatus(library:LibraryItem[]):string[] {
-//         let arr:string[] = []
-//         for(let c of library){
-//             if(c.readingStatus ===true){
-//                 arr.push(`Already read ${c.title} by ${c.author}`);
-//             }
-//             else{
-//                 arr.push(`You still need to read ${c.title} by ${c.author}`)
-//             }
-//         }
-//         return arr;
-//     }
-//     console.log('Status of each books in the library :',displayStatus(library));
+    function displayStatus(library:LibraryItem[]):string[] {
+        let arr:string[] = []
+        for(let c of library){
+            if(c.readingStatus ===true){
+                arr.push(`Already read ${c.title} by ${c.author}`);
+            }
+            else{
+                arr.push(`You still need to read ${c.title} by ${c.author}`)
+            }
+        }
+        return arr;
+    }
+    console.log('Status of each books in the library :',displayStatus(library));
 
 // -------------------------------------------------------------------------
 
 // 26)  Try and catch and finally problem
 
-    // function stringReverse(str:any):void{
-    //     try{
-    //         let revS = str.split('').reverse().join('');
-    //         console.log(`reversed string from ${str} is ${revS}`);
-    //     }catch(err:any){
-    //         console.log(`Error is ${err.message}`);
-    //     }
-    //     finally{
-    //         console.log(`Type of str :${typeof str}`)
-    //     }
+    function stringReverse(str:any):void{
+        try{
+            let revS = str.split('').reverse().join('');
+            console.log(`reversed string from ${str} is ${revS}`);
+        }catch(err:any){
+            console.log(`Error is ${err.message}`);
+        }
+        finally{
+            console.log(`Type of str :${typeof str}`)
+        }
         
         
-    // }
-    // let str = '1234'
-    // stringReverse(str);
-    // console.log('next----------------------');
-    // stringReverse(Number(1234))
+    }
+    let str = '1234'
+    stringReverse(str);
+    console.log('next----------------------');
+    stringReverse(Number(1234))
 
 // ---------------------------------------------------------------------------    
 
 // 27) throw error under the following conditions :
 
-function checkHeight(value:any){
-    try{
-        if(value > 50){
-            throw new Error('Huge height');
-        }
-        else if(value < 20){
-            throw new Error('Tiny height')
-        }else{
-            console.log('Height is :',value);
-        }
-    }catch(err:any){
-        console.log('error at checkHeight function :',err.message)
+class HeightError extends Error{
+    constructor(message:string){
+        super(message);
+        // this.name = 'Height error'
     }
 }
-let value = 'seven';
-checkHeight(value);
+
+class NotANumberError extends HeightError{
+    constructor(){
+        super('NotANumberError');
+    }
+}
+
+class HugeHeightError extends HeightError{
+    constructor(){
+        super('HugeHeightError');
+    }
+}
+
+class TinyHeightError extends HeightError{
+    constructor(){
+        super('TinyHeightError');
+    }
+}
+
+
+
+function checkHeight(value:any){
+    try{
+          if(isNaN(value)){
+        throw new NotANumberError();
+    }
+    if(value > 75){
+        throw new HugeHeightError()
+    }
+    if(value < 2){
+        throw new TinyHeightError()
+    }
+    console.log('height is :',value);
+
+    }catch(err){
+        if (err instanceof HeightError){
+            console.log(err.message)
+        }else{
+            console.log('unexpected error:',err)
+        }
+    }
+  
+}
+checkHeight('seven');
+checkHeight(77);
+checkHeight(2);
+checkHeight(33);
+
 
 
 // ---------------------------------------------------------------------------
+
+// 28)
+
+class Car{
+    private name;
+    private mileage;
+    private max_speed;
+    constructor(name:string,mileage:number,max_speed:number){
+        this.name = name;
+        this.mileage = mileage;
+        this.max_speed  = max_speed;
+    }
+    getName(){
+        console.log(`${this.name} has mileage${this.mileage} and top speed as ${this.max_speed}`)
+    }
+}
+let car = new Car('Toyota',20,399)
+car.getName()
+
+// -------------------------------------------------------------------
+
+// 29)
+
+function myFilter(myArray:number[],callback:(sum:number)=> boolean){
+    let sum = myArray.reduce((acc,curr)=> acc+curr);
+    if(callback(sum)){
+        return sum;
+    }
+}
+
+function isEven(val:number):boolean{
+    return val%2 === 0;
+}
+
+let array = [1,2,3,4,5,8];
+myFilter(array,isEven)
